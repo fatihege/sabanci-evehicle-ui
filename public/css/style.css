@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
+
+:root {
+    --max-width: 1200px;
+    --font-family: 'Fira Mono', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body,
+.container {
+    background-color: #181818;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+svg {
+    height: 100vh;
+    width: auto;
+}
+
+.signal-icon,
+.left-safety-belt-icon,
+.right-safety-belt-icon,
+.trunk-icon,
+.wiper-icon,
+.left-lock-icon,
+.right-lock-icon,
+.left-brake-icon,
+.right-brake-icon,
+.left-headlight-lamp,
+.right-headlight-lamp,
+.left-signal-lamp,
+.right-signal-lamp,
+.left-signal-light,
+.right-signal-light,
+.left-backlight-lamp,
+.right-backlight-lamp,
+.left-back-signal-lamp,
+.right-back-signal-lamp,
+.left-back-signal-light,
+.right-back-signal-light,
+.left-headlight,
+.right-headlight,
+.left-backlight,
+.right-backlight,
+.car-state-circle {
+    opacity: 0;
+    transition: opacity .2s ease-out;
+}
+
+.signal-icon.active,
+.left-safety-belt-icon.active,
+.right-safety-belt-icon.active,
+.trunk-icon.active,
+.wiper-icon.active,
+.left-lock-icon.active,
+.right-lock-icon.active,
+.left-brake-icon.active,
+.right-brake-icon.active,
+.left-headlight-lamp.active,
+.right-headlight-lamp.active,
+.left-signal-lamp.active,
+.right-signal-lamp.active,
+.left-signal-light.active,
+.right-signal-light.active,
+.left-backlight-lamp.active,
+.right-backlight-lamp.active,
+.left-back-signal-lamp.active,
+.right-back-signal-lamp.active,
+.left-back-signal-light.active,
+.right-back-signal-light.active,
+.left-headlight.active,
+.right-headlight.active,
+.left-backlight.active,
+.right-backlight.active,
+.car-state-circle.active {
+    opacity: 1;
+}
+
+.signal-icon.active {
+    animation: signalIcon 1s infinite ease-out;
+}
+
+@keyframes signalIcon {
+    50% {
+        opacity: 0;
+    }
+}
+
+.battery {
+    transition: transform .5s ease-out;
+}
+
+.speed-hand,
+.left-speed-hand,
+.right-speed-hand,
+.compass,
+.left-door,
+.right-door {
+    transition: transform .3s linear;
+}
+
+.left-door.active {
+    transform: rotate(15deg) !important;
+}
+
+.right-door.active {
+    transform: rotate(-15deg) !important;
+}
